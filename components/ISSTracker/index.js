@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Controls from "../Controls/index";
 import Map from "../Map/index";
 import useSWR from "swr";
@@ -21,34 +20,7 @@ export default function ISSTracker() {
     refreshInterval: 5000,
   });
   if (isLoading) return <p>loading...</p>;
-  console.log(data);
-
-  /*   const [coords, setCoords] = useState({
-    longitude: 0,
-    latitude: 0,
-  });
-
-  async function getISSCoords() {
-    try {
-      const response = await fetch(URL);
-      if (response.ok) {
-        const data = await response.json();
-        setCoords({ longitude: data.longitude, latitude: data.latitude });
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      getISSCoords();
-    }, 5000);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []); */
+  //console.log(data);
 
   return (
     <main>
